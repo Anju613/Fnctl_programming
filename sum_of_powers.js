@@ -28,14 +28,16 @@ console.log(`Sum of CUBEES of 1,2,3 is ${sumOfPowers([1,2,3],cube,sumOfCubes)}`)
 /*Following is the code using map andd reduce
   map - to apply the required power (like square or cube)
   reeduce - to apply the sum of power values*/
+
+const powerOf = (x,n) => x ** n
   
 function SumOfPowers(arr,power)
 {
-  return arr.map(x =>power(x)).reduce((powerSum,x) => powerSum + x)
+  return arr.map(x =>powerOf(x,power)).reduce((powerSum,x) => powerSum + x)
 }
 
-console.log(`Sum of SQUARES using map and reduce of 1,2,3 is ${SumOfPowers([1,2,3],square)}`);
-console.log(`Sum of CUBEES using map and reduce of 1,2,3 is ${SumOfPowers([1,2,3],cube)}`);
+console.log(`Sum of SQUARES using map and reduce of 1,2,3 is ${SumOfPowers([1,2,3],2)}`);
+console.log(`Sum of CUBEES using map and reduce of 1,2,3 is ${SumOfPowers([1,2,3],3)}`);
 
 
 </script>
