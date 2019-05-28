@@ -29,17 +29,13 @@ console.log(`Sum of CUBEES of 1,2,3 is ${sumOfPowers([1,2,3],cube,sumOfCubes)}`)
   map - to apply the required power (like square or cube)
   reeduce - to apply the sum of power values*/
   
-function sumOfPower_2s(arr)
+function SumOfPowers(arr,power)
 {
-  return arr.map(x =>square(x)).reduce((squareSum,x) => squareSum + x)
-}
-function sumOfPower_3s(arr)
-{
-  return arr.map(x =>cube(x)).reduce((cubeSum,x) => cubeSum + x)
+  return arr.map(x =>power(x)).reduce((powerSum,x) => powerSum + x)
 }
 
-console.log(`Sum of SQUARES using map and reduce of 1,2,3 is ${sumOfPower_2s([1,2,3])}`);
-console.log(`Sum of CUBEES using map and reduce of 1,2,3 is ${sumOfPower_3s([1,2,3])}`);
+console.log(`Sum of SQUARES using map and reduce of 1,2,3 is ${SumOfPowers([1,2,3],square)}`);
+console.log(`Sum of CUBEES using map and reduce of 1,2,3 is ${SumOfPowers([1,2,3],cube)}`);
 
 
 </script>
